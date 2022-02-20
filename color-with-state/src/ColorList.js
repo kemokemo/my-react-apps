@@ -1,12 +1,13 @@
 import React from "react";
 import Color from "./Color";
 
-function ColorList({ colors = [] }) {
-	if(!colors.length) return <div>No Colors Listed.</div>;
+function ColorList({ colors = [], onRemoveColor = f => f }) {
+	if(!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
+
 	return (
 		<div>
 			{
-				colors.map(color => <Color key={color.id} {...color}/>)
+				colors.map(color => <Color key={color.id} {...color} onRemove={onRemoveColor} />)
 			}
 		</div>
 	);
