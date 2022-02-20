@@ -5,3 +5,7 @@
 - Start with `yarn start`
 - Test with `yarn test`
 - Build with `yarn build`
+
+## ポイント
+
+データはプロパティ経由で上から下へ、ユーザー操作は関数プロパティ経由でコンポーネントツリーを下から上へ。
